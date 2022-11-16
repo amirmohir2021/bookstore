@@ -62,6 +62,15 @@ isset($_SESSION['user_email'])){
         <h1 class="text-center pb-5 display-4 fs-3">
             Add New Author </h1>
 
+            <?php
+                  if(isset($_GET['error'])){
+          ?>
+     <div class="alert alert-primary" role="alert">
+     <?php echo htmlspecialchars($_GET['error']);  ?>
+      </div>
+
+       <?php  }  ?>
+
             <div class="mb-3">
         <label class="form-label">Author Name</label>
         <input type="text" class="form-control"
